@@ -20,7 +20,9 @@ let machinescore = 0;
 
 //User vs Computer Algo
 function playRound(playerSelection , computerSelection){
-    if ((playerSelection === "rock" && computerSelection === "scissors" ) || (playerSelection === "paper" && computerSelection === "rock" ) || (playerSelection === "scissors" && computerSelection === "paper" ))
+    if ((playerSelection === "rock" && computerSelection === "scissors" ) || 
+        (playerSelection === "paper" && computerSelection === "rock" ) || 
+        (playerSelection === "scissors" && computerSelection === "paper" ))
     {
         console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
         alert(`You Win! ${playerSelection} beats ${computerSelection}`);
@@ -28,7 +30,9 @@ function playRound(playerSelection , computerSelection){
         return manscore;
 
     }
-    else if ((computerSelection === "rock" && playerSelection === "scissors" ) || (computerSelection === "paper" && playerSelection === "rock" ) || (computerSelection === "scissors" && playerSelection === "paper" ))
+    else if ((computerSelection === "rock" && playerSelection === "scissors" ) || 
+            (computerSelection === "paper" && playerSelection === "rock" ) || 
+            (computerSelection === "scissors" && playerSelection === "paper" ))
     {
         console.log(`Computer Wins! ${computerSelection} beats ${playerSelection}`);
         alert(`Computer Wins! ${computerSelection} beats ${playerSelection}`);
