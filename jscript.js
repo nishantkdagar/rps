@@ -1,3 +1,4 @@
+//Make a Random Choice For Computer
 function computerPlay(){
     const compchoices = ["rock", "paper", "scissors"];
     let num = Math.floor(Math.random()*3);
@@ -5,6 +6,8 @@ function computerPlay(){
     return complay;
 }
 
+
+//Take User Input
 function playerPlay(){
     let playerchoice = prompt("Enter your Choice, Either: Rock, Paper or Scissors", '');
     let playerchoicerefined = playerchoice.toLowerCase();
@@ -14,6 +17,8 @@ function playerPlay(){
 let manscore = 0;
 let machinescore = 0;
 
+
+//User vs Computer Algo
 function playRound(playerSelection , computerSelection){
     if ((playerSelection === "rock" && computerSelection === "scissors" ) || (playerSelection === "paper" && computerSelection === "rock" ) || (playerSelection === "scissors" && computerSelection === "paper" ))
     {
@@ -36,6 +41,8 @@ function playRound(playerSelection , computerSelection){
     }
 }
 
+
+//Looping the Game 5 Times
 function game(){
 
     for(i=0; i<5; i++){
@@ -43,6 +50,8 @@ function game(){
         const computerSelection = computerPlay();
         playRound(playerSelection, computerSelection);
     }
+
+    //Total Score for Man VS Machine
     if(manscore>machinescore){
         console.log("Humans Won");
         alert(`Humans Won! Human: ${manscore} | Machine: ${machinescore}`);
