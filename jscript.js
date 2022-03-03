@@ -6,7 +6,7 @@ function computerPlay(){
 }
 
 function playerPlay(){
-    let playerchoice = prompt("Enter your Choice", '');
+    let playerchoice = prompt("Enter your Choice, Either: Rock, Paper or Scissors", '');
     let playerchoicerefined = playerchoice.toLowerCase();
     return playerchoicerefined;
 }
