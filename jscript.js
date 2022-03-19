@@ -8,15 +8,26 @@ function computerPlay(){
 
 
 //Take User Input
-function playerPlay(){
+/*function playerPlay(){
     let playerchoice = prompt("Enter your Choice, Either: Rock, Paper or Scissors", '');
     let playerchoicerefined = playerchoice.toLowerCase();
     return playerchoicerefined;
-}
+}*/
 
 let manscore = 0;
 let machinescore = 0;
 
+
+function score(game, manscore, machinescore) {
+    const score = document.querySelector(".score");
+    if (game === 1) {
+      score.textContent = `You win! Score: ${manscore} to ${machinescore}`;
+    } else if (game === 0) {
+      score.textContent = `You lose! Score: ${manscore} to ${machinescore}`;
+    } else {
+      score.textContent = `Its a draw!!! Score: ${manscore} to ${machinescore}`;
+    }
+  }
 
 //User vs Computer Algo
 function playRound(playerSelection , computerSelection){
@@ -47,7 +58,7 @@ function playRound(playerSelection , computerSelection){
 
 
 //Looping the Game 5 Times
-function game(){
+/*function game(){
 
     for(i=0; i<5; i++){
         const playerSelection = playerPlay();
@@ -71,7 +82,21 @@ function game(){
     }
     
 }
+game();*/
+
+
+let playerSelection = null;
+
+function game() {
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      playerSelection = button.id;
+      let computerSelection = computerPlay();
+      // console.log(playerSelection, computerSelection);
+      playRound(playerSelection, computerSelection);
+    });
+  });
+}
+
 game();
-
-
-
